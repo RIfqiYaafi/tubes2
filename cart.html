@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="js/cart.js" defer></script>
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- Font Awesome CDN Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS File Link  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="home.html" class="logo">coffee <i class="fas fa-mug-hot"></i></a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="home.html#about">About</a>
+            <a href="home.html#menu">Menu</a>
+            <a href="home.html#review">Review</a>
+            <a href="home.html#book">Book</a>
+        </nav>
+        <div class="cart">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section id="cart" class="cart-section">
+        <h1>Your Cart</h1>
+        <form action="api/cart_api.php" method="POST" id="cart-form">
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will appear here -->
+            </div>
+
+            <!-- Hidden fields for cart data -->
+            <input type="hidden" name="item_ids" id="item-ids">
+            <input type="hidden" name="item_names" id="item-names">
+            <input type="hidden" name="item_prices" id="item-prices">
+
+            <a href="index.html" class="btn back-to-home">Back to Menu</a>
+            <button id="checkout" class="btn" type="button">Proceed to Checkout</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p class="credit">Created By Mr. Web Designer | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
